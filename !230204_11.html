@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+  <script>  //p.254 확인문제 1
+    const book = {
+      name : '혼자 공부하는 파이썬',  //쉼표를 무조건 찍어야된다!!!!!!!
+      price : 18000, 
+      publisher: '한빛미디어'
+    }
+
+    console.log(book.name)
+    console.log(book.price)
+    console.log(book.publisher)  
+  </script> 
+
+  <script>  //p.255 확인문제 4
+    const object = {
+      ko: '빵',
+      en: 'bread',
+      ja: 'パン',
+      fr: 'pain',
+      es: 'pan',
+      lang: {
+        ko: '한국어',
+        en: '영어',
+        ja: '일본어',
+        fr: '프랑스어',
+        es: '스페인어'
+      },
+      print: function (lang) { //일단 이 코드에서 메소드는 print다 
+        console.log(`${this.ko}은/는 ${this.lang[lang]}로 ${this[lang]}입니다.`)
+      }//${this.ko} 는 '한국어'이며,   ${this.lang[lang]} 는 '스페인어' 이며, ${this[lang]} 는 'pan' 이다.   잘 생각해보면 답 나와  
+    }
+
+    object.print('es')
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
