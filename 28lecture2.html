@@ -1,0 +1,91 @@
+<!--ㅡㅡㅡㅡㅡp.212 기본매개변수의 활용 소스코드 5-1-12.htmlㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<script> 
+    function earnings (name, wage = 8590, hours= 40) {
+      console.log(`# ${name} 님의 급여정보`)
+      console.log(`- 시급: ${wage}원` )
+      console.log(`- 근무 시간: ${hours}시간`)
+      console.log(`-급여: ${wage * hours}원`)
+      console. log('')  
+    }
+
+    //최저임금으로 최대한 일하는 경우
+    earnings('구름')
+
+    // 시급 1만원으로 최대한 일하는 경우
+    earnings('별', 10000)
+    
+    // 시급 1만원으로 52시간 일한 경우
+    earnings('인성', 10000, 52)
+</script>
+<!--
+# 구름 님의 급여정보
+- 시급: 8590원
+- 근무 시간: 40시간
+-급여: 343600원
+
+# 별 님의 급여정보
+- 시급: 10000원
+- 근무 시간: 40시간
+-급여: 400000원
+
+# 인성 님의 급여정보
+- 시급: 10000원
+- 근무 시간: 52시간
+-급여: 520000원
+
+undefined
+-->
+
+<!--ㅡㅡㅡp.213 기본 매개변수를 추가한 윤년함수 소스코드 5-1-13.htmlㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<script>
+  function isLeapYear(year=new Date().getFullYear()) {
+    console.log(`매개변수 year: ${year}`)
+    return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)
+  }
+
+  console.log(`올해는 윤년일까? === ${isLeapYear()}`)
+</script>
+
+<!--ㅡㅡㅡp.214/ arguments를 사용한 가변 매개변수 함수/ 소스코드 5-1-14.htmlㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+  function sample() {
+    console.log(arguments)
+    for(let i = 0; i < arguments.length; i++) {
+      console.log(`${i}번째 요소: ${arguments[i]}`)
+    }
+  }  
+  sample(1)
+  sample(1, 2)
+  sample(1, 2, 3)
+  sample(1, 2, 3, 4)
+</script>
+<!--ㅡㅡㅡp.215/ 구 버전 자바스크립트에서 전개 연산자 구현하기/ 소스코드 5-1-15.htmlㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+  function sample(...items) {
+    console.log(items)
+  }
+
+  //전개 연산자 사용 여부 비교하기
+  const array = [1, 2, 3, 4]
+  console.log(sample.apply(null, array))
+  //call(this로 사용될 값, 호출할 함수의 매개변수들 ... )
+  //apply(this로 사용될 값, 호출할 함수의 매개변수들을 배열로 받는다. )
+</script>
+<!--ㅡㅡㅡp.215/ 구 버전 자바스크립트에서 기본 매개변수 구현하기/ 소스코드 5-1-16.htmlㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--함수의 매개변수에 바로 값을 입력하는 기본매개변수는 최신 자바스크립트에서 추가된 기능이다.
+   구 버전의 자바 스크립트에서는 일반적으로 다음과 같은 코드를 사용해서 기본 매개변수를 구현했다.-->
+<script>
+  function earnings (wage, hours) {
+    wage = typeof(wage) != undefined ? wage : 8590
+    hours = typeof(hours) != undefined ?  hours : 52
+    return wage * hours
+  }
+  console.log(wage,hours)
+</script>
+function earnings (wage, hours) {
+  wage = wage || 8590
+  hours = hours || 52
+  return wage * hours
+}

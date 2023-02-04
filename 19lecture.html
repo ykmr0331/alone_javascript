@@ -1,0 +1,148 @@
+<!--3.2절 확인문제 p.154-->
+
+<!--확인문제 1번  이거 삼항연산자임-->
+<script>
+  const result = true ? prompt('값을 입력해주세요', '') : confirm('버튼을 클릭해주세요')
+  alert(result)
+</script>
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡ조건부 연산자ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ17강?에 있었음
+밑에 한줄이 표현식임 ㅋㅋ
+ㅇㅇ ? ㅇㅇ : ㅇㅇ
+  //불_표현식 ? 참일_때의_결과 : 거짓일_때의_결과
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<!--확인문제 2번  누적예제: 태어난 연도를 입력받아 띠 출력하기-->
+<script>
+  const 입력 = Number(prompt("태어난 연도를 입력하세요", '')) % 12
+  if(입력 ===0){alert('원숭이 띠입니다.')}
+  else if(입력 ===1)  {alert('닭띠입니다.')}
+  else if(입력 ===2)  {alert('개띠입니다.')}
+  else if(입력 ===3)  {alert('돼지띠입니다.')}
+  else if(입력 ===4)  {alert('쥐띠입니다.')}
+  else if(입력 ===5)  {alert('소띠입니다.')}
+  else if(입력 ===6)  {alert('호랑이띠입니다.')}
+  else if(입력 ===7)  {alert('토끼띠입니다.')}
+  else if(입력 ===8)  {alert('용띠입니다.')}
+  else if(입력 ===9)  {alert('뱀띠입니다.')}
+  else if(입력 ===10) {alert('말띠입니다.')}
+  else if(입력 ===11) {alert('양띠입니다.')}
+</script>
+<!--이걸 스위치로 변경해보자-->
+
+<script>
+  const rawInput = prompt('태어난 해를 입력해주세요.', '')
+  const year = Number(rawInput) 
+  const e = year % 12
+  
+  let result
+  switch (e)  {
+   case 0:  result = '원숭이'; break;
+   case 1:  result = '닭'; break;
+   case 2:  result = '개'; break;
+   case 3:  result = '돼지'; break;
+   case 4:  result = '쥐'; break;
+   case 5:  result = '소'; break;
+   case 6:  result = '호랑이'; break;
+   case 7:  result = '토끼'; break;
+   case 8:  result = '용'; break;
+   case 9:  result = '뱀'; break;
+   case 10: result = '말'; break;
+   case 11: result = '양'; break;
+  }
+  alert(`${year}년에 태어났다면 ${result} 띠입니다.`)
+</script>
+
+<!--p.156  태어난 연도를 입력받아 12지신으로 변경하고, 입력한 연도의 갑~계를 계산해라 이거 내가한거!!!!-->
+
+<script>
+  const rawInput =prompt('태어난 해를 입력해주세요.', '')
+  const year = Number(rawInput)
+  
+  const 간 = year % 10
+  const 띠 = year % 12
+ 
+  let result1
+  switch (간) {
+   case 0:  result1 = '경'; break; 
+   case 1:  result1 = '신'; break;
+   case 2:  result1 = '임'; break;
+   case 3:  result1 = '계'; break;
+   case 4:  result1 = '갑'; break;
+   case 5:  result1 = '을'; break;
+   case 6:  result1 = '병'; break;
+   case 7:  result1 = '정'; break;
+   case 8:  result1 = '무'; break;
+   case 9:  result1 = '기'; break;
+  }
+  
+  let result2
+  switch (띠) {
+   case 0:  result2 = '신'; break;
+   case 1:  result2 = '유'; break;
+   case 2:  result2 = '술'; break;
+   case 3:  result2 = '해'; break;
+   case 4:  result2 = '자'; break;
+   case 5:  result2 = '축'; break;
+   case 6:  result2 = '인'; break;
+   case 7:  result2 = '묘'; break;
+   case 8:  result2 = '진'; break;
+   case 9:  result2 = '사'; break;
+   case 10: result2 = '오'; break;
+   case 11: result2 = '미'; break;
+  }
+
+  alert(`${year}년 ${result1}${result2}년 입니다.`)
+</script> 
+
+<!-- 이건 영상 정답 if else 통해서-->
+<script>
+  const rawInput = prompt('태어난 해를 입력해주세요', '')
+  const year = Number(rawInput)
+
+  let result1
+  const e1 = year %12
+  if      ( e1 ===0)  {result1 = '신'}
+  else if ( e1 ===1)  {result1 = '유'}
+  else if ( e1 ===2)  {result1 = '술'}
+  else if ( e1 ===3)  {result1 = '해'}  
+  else if ( e1 ===4)  {result1 = '자'}
+  else if ( e1 ===5)  {result1 = '축'}
+  else if ( e1 ===6)  {result1 = '인'}
+  else if ( e1 ===7)  {result1 = '묘'}
+  else if ( e1 ===8)  {result1 = '진'}
+  else if ( e1 ===9)  {result1 = '사'}
+  else if ( e1 ===10) {result1 = '오'}
+  else if ( e1 ===11) {result1 = '미'}
+
+  let result2
+  const e2 = year % 10
+  if      ( e2 ===0)  {result2 = '경'}
+  else if ( e2 ===1)  {result2 = '신'}
+  else if ( e2 ===2)  {result2 = '임'}
+  else if ( e2 ===3)  {result2 = '계'}  
+  else if ( e2 ===4)  {result2 = '갑'}
+  else if ( e2 ===5)  {result2 = '을'}
+  else if ( e2 ===6)  {result2 = '병'}
+  else if ( e2 ===7)  {result2 = '정'}
+  else if ( e2 ===8)  {result2 = '무'}
+  else if ( e2 ===9)  {result2 = '기'}
+
+  alert(`${year}년은 ${result2}${result1}년입니다.`)
+
+
+
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ확인문제4 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--결과값 다른거 하나는?
+1. true ? alert('출력A') : alert('출력B')
+2. false ? alert('출력B') : alert('출력A')
+3. true || alert('출력A')
+4. true && alert('출력A') 
+
+1번은 앞이 true이므로 앞에것만 출력함
+2번은 false이므로 뒤에것만 출력함
+3번은 앞이 true이고 또는이므로 출력 안함
+4번은 앞이 true인데 그리고이므로 출력함
+
+-->

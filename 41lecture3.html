@@ -1,0 +1,31 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ스타일 조작방법ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const divs = document.querySelectorAll('div')
+      divs.forEach((div, key) =>{
+        console.log(key)
+        div.style.backgroundColor =`rgb(${key * 25.5},${key * 25.5},${key * 25.5})`
+        div.style.height = '10px'
+        //div.style['background-color']
+        console.log(div.style.height)
+      })
+    })
+  </script>     
+</head>
+<body>ss
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>l

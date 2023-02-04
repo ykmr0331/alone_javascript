@@ -1,0 +1,38 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ문서객체 이동하기  타이머관련테크닉 1ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.createElement('h2')
+      header.textContent = '안녕하세요'
+
+      const first = document.querySelector('.first')//311쪽 문서객체 가져오기
+      const second = document.querySelector('.second')
+       /*문서객체 이동하기  타이머관련테크닉 1, 
+      setTimeout을 재귀적으로 활용하는것? */ 
+      const toFirst = () => {
+        first.appendChild(header)
+        setTimeout(toSecond, 1000)//반대편에 있는 녀석을 1초있다가 호출하게 만든다.
+      }
+      const toSecond = () => {
+        second.appendChild(header)
+        setTimeout(toFirst, 1000)
+      }
+      toFirst()
+    })
+  </script>    
+</head>
+<body>
+  <div class="first">
+    <h1>첫 번째 div 태그 내부</h1>
+  </div>
+  <hr>
+  <!--div 두개 구분지을려고-->
+  <div class="second">
+    <h1>두 번째 div 태그 내부</h1>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!--41강 두번째ㅡㅡㅡㅡㅡㅡㅡ속성 조작하기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      //조작!
+      const img = document.querySelector('img')
+      //값을 넣는 행위
+      img.setAttribute('src'/*속성의이름*/,'http://placekitten.com/200/200'/*값*/)
+      //값을 추출 행위 
+      //console.log(img.getAttribute('src'))
+      /*위에 애는 매개변수 하나만 넣어주도록*/
+      console.log(img.src)
+    })
+  </script>
+</head>
+<body>
+  <img src="" alt="">
+</body>
+</html>

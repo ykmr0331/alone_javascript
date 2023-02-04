@@ -1,0 +1,157 @@
+<!--
+콘솔에서
+
+변수에 적용할 수 있는 연산자
+  복합 대입 연산자 + 증감 연산자
+
+let a = 100
+undefined
+
+a
+100
+
+a+= 100 (a= a + 100이란 뜻임)
+200
+
+a
+200
+
+복합대입연산자 할 때 주의할 점
+복합대입연산자는 a = a +100이므로
+a는 변수여야함
+
+즉
+const a =100 처럼 a를 상수로 지정했을 떄
+
+a= a+100 
+여기서 오류나옴
+
+그리고 a+=100는 a=a+100이므로
+lvalue와 rvalue로 모두 사용됩니다.
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+증감연산자
+
+//a++ a-- 
+//++a --a  이렇게 2가지방식이 있다.(어느쪽을 사용하던지 상관은 없지만
+  위쪽 코드를 더 많이 사용하긴함)
+
+let a = 0
+undefined
+
+a++
+0
+
+a
+1
+
+a--  (a에서 1을 빼는 녀석이니까)
+1
+
+a
+0
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+let a = 0
+undefined
+
+a++
+a++
+a++
+console.log(a)
+
+3이 나옴 (3번 더하고 console.log(a)로 출력했으니까)
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+undefined 자료형
+
+1.상수와 변수로 선언하지 않은 식별자
+
+typeof(a)
+"undefined"  (아직 선언되지 않은 것이기 때문)
+
+2.값이 없는 변수
+let b   (b라는 값에 추가적인 값을 지정하지 않았어)
+typeof(b)
+"undefined"
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+p.114
+
+확인문제
+  1.다음 중 상수를 선언 할 때 사용하는 연산자
+    const
+  2.값을 할당할 때 사용하는 연산자는 어떤 것인가요?
+    =
+  3.어떤 오류가 발생하는가?
+    3-1
+      const라는 상수를 만들 때는 상수를 만드는 시점에 값을 확정해야하기
+      때문에 'const r'을 'const r = 10'으로 바꿔야 한다. 그리고 r=10
+      을 제거하고
+
+<script>잘못된것
+  const r 
+  r = 10
+
+  console.log('넓이 = ${3.14 * r * r}')
+  console.log('둘레 = ${2 * 3.14 * r}')
+</script> 
+<script> 제대로 된것
+  const r = 10
+
+  console.log('넓이 = ${3.14 * r * r}')
+  console.log('둘레 = ${2 * 3.14 * r}')
+</script>
+    
+    3-2
+      마찬가지로 비슷하게 하면 됌
+
+<script> 잘못된것
+  let r
+  r = 10
+  console.log('넓이 = ${3.14 * r * r}')
+  console.log('둘레 = ${2 * 3.14 * r}')
+</script>
+
+<script>  이렇게 바꿔야함
+  let r = 10
+  console.log('넓이 = ${3.14 * r * r}')
+  console.log('둘레 = ${2 * 3.14 * r}')
+</script>
+
+  4. 실행결과 예측하기
+<script>
+  const number = 10   
+  
+  (number라는 변수가 상수const로서 선언이 되었기에
+  증감연사자를 사용하는것이 불가능하다.그래서 오류가 발생한다)
+     상수는 증감연산자를 사용할 수 없다는건데
+
+  console.log(++number)
+  console.log(number++)
+  console.log(++number)
+  console.log(number--)
+
+</script>
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+a++ 와 ++a의 차이에 대한 것
+
+a++ : 현재 문장을 실행한 후에 a+=1하라는 뜻
+  let a = 0
+  console.log(a++) // 0 // console.log(a) → a += 1
+  console.log(a) // 1
+++a : 현재 문장을 실행하기 전에 a+=1하라는 뜻
+  let b =0
+  console.log(++b) // 1 // b += 1 → console.log(b)
+  console.log(b)  // 1
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>

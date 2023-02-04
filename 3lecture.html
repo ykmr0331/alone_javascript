@@ -1,0 +1,44 @@
+<!--
+콘솔에서 오류 확인하는 방법
+- about:blank 페이지로 들어가서 검사를 눌러서 콘솔탭을 실행해라
+여기서 코드를 잘못입력하게되면 오류가 발생한다.
+console.log("안녕하세요)를 하면 "가 없기 때문에 오류가 발생한다.
+즉 오류를 곧바로 출력해준다
+
+파일실행 때 오류 확인하기
+ 여기서 부터는 밑에서봐라
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <script>
+      alrt("안녕하세요")
+      // 이파일을 about:blank 로 들어가서 검사 들어가면 오른쪽 위에 한개 오류난거 볼 수 있다.
+/* 나중에 윤인성에게 오류 보낼 때 보내는 형식
+
+      오류:Uncaught ReferenceError: alrt is not defined
+      코드:alrt("안녕하세요")
+      저는 이렇게 생각해서 될거라 생각했는데 실제로 이렇게 오류가 나서 안된다.
+
+      이런식으로 오류랑 코드를 같이 보내야 한다.
+*/
+/*자주 발생하는 오류:
+        Reference Error: 단어오탈자가 발생하면 생기는 오류
+          alrt('안녕하세요')
+        Syntax Error: 일반적으로 기호에서 오탈자가 발생하면 뜬다. 구문이 잘못되거나 문법이 잘못되거나
+          alert(')
+
+ㅋ
+
+
+  
+    </script> 
+</head>
+<body>
+  
+</body>
+</html>

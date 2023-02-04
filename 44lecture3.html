@@ -1,0 +1,32 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡ44강  이벤트 객체, 이벤트 발생 객체, 기본 이벤트ㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--336 이벤트 발생객체보기-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const h1 = document.querySelector('h1')
+      const textarea = document.querySelector('textarea')
+
+      textarea.addEventListener('keyup', () => { //textarea가 이벤트 발생객체다
+        h1.textContent = `글자 수: ${textarea.value.length}`        
+      })
+      textarea.addEventListener('keyup', (event) => { 
+        h1.textContent = `글자 수: ${event.currentTarget.value.length}`        
+      })
+      textarea.addEventListener('keyup', function () => { 
+        h1.textContent = `글자 수: ${this.value.length}`        
+      })    //위의 세가지 코드 모두 같은거라는데??
+      //세가지다 기억하면 좋지만 굳이 정하자면 두번째 event.currentTarget은 꼭 기억하면좋겠다
+    })
+  </script>
+</head>
+<body>
+  <h1>글자 수: 0</h1>
+  <textarea></textarea>
+</body>
+</html>

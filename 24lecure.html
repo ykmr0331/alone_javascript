@@ -1,0 +1,344 @@
+<!--24강 마무리 + 피라미드 예제-->
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 중첩반복문 사용하기 (1)ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<!-- 이건 꼼수적인 방법-->
+<script>
+  let output = ''
+
+output += '*\n'
+output += '**\n'
+output += '***\n'
+output += '****\n'
+output += '*****\n'
+output += '******\n'
+output += '*******\n'
+output += '********\n'
+output += '*********\n'
+
+console.log(output)
+</script>
+
+<!--반복문 사용해서 만들어보기-->
+
+<script>
+
+let output2 = ''
+
+for(let i = 0; i < 9; i++) {
+  for(let j = 0; j < i + 1; j ++) {
+    output2 += '*'   //output2 += '*\n'을 분리해서 써야한다//
+  }
+  output2 += '\n' 
+}
+
+console.log(output2)
+
+
+// 자세한 분석은 강의 뒷부분에 넣었다.
+
+//중첩 사용 가능!!
+for(let i = 0; i <10; i++) {
+  for(let j =0; j < 10; j++) {
+    for (let k = 0; k < 10; k++) {
+
+    }
+  }
+}
+
+// 횟수에 숫자 표현식이 올 수 있음!
+for(let j =0; j < ghlttn; j++) {}
+for(let j = 0; j < [표현식]; j++) {}
+</script>
+
+<!--ㅡㅡㅡㅡㅡㅡㅡ이거 만들어보기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+'
+*
+***
+*****
+*******
+*********
+***********
+'
+-->
+<script>
+let output3 = ''
+
+for(let i = 0; i < 9; i++) {
+  for(let j = 0; j < 2 * i + 1; j ++) {
+    output3 += '*'   //2*i + 1을 한 이유는 밑에 적혀있음, 일단 이해했
+  }
+  output3 += '\n' 
+}
+
+console.log(output3)
+</script>
+
+<!--
+  2*i + 1을 한 이유는 
+
+i   (2i + 1) >   j         
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+0    1       >   0  
+1    3       >   2
+2    5       >   4  
+3    7       >   6
+4    9       >   8        
+5    11      >   10 
+6    13      >   12 
+7    15      >   14 
+8    17      >   16	  
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--이거 만들어보기
+'
+*
+ ***
+  *****
+   *******
+    *********
+     ***********
+      *************
+       ***************
+'
+-->
+
+
+<script>
+
+let output4 = ''
+
+for(let i = 0; i < 9; i++) {
+  for(let k =0; k <i +1; k ++) {
+    output4 += ' '
+  }
+  for(let j = 0; j < 2 * i + 1; j ++) {
+    output4 += '*'   //2*i + 1을 한 이유는 밑에 적혀있음, 일단 이해했
+  }
+  output4 += '\n' 
+}
+
+console.log(output4)
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--중첩반복문으로 피라미드만들
+
+     *
+    ***
+   *****
+  *******
+ *********
+***********  
+이거 만들어보-->
+
+<script>
+  let output5 = ''
+  
+    for(let i = 0; i < 6; i++) {  //줄만드는거
+      for(let k = 0; k <9 - i; k ++) {
+        output5 += ' '
+      }
+      for(let j = 0; j < 2 * i + 1; j ++) {// *만드는거
+        output5 +='*' 
+      }
+      output5 += '\n' 
+    }
+    
+    console.log(output5)
+  </script>
+  <!--ㅡㅡㅡㅡㅡㅡㅡㅡ다이아몬드 만들어보기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+    *
+   ***
+  *****
+ *******
+*********9
+ *******7
+  *****5
+   ***3
+    *1
+  -->
+
+
+<!--일단 내가 구상해본것-->
+<script>
+
+let output6 = '' 
+
+  for(let i = 0; i<9; i++) {// 줄 만드는거
+    for(let k = 0; k <4 - i; k++) {//빈칸 만드는거
+      output6 += ' '
+    }
+      for(let k = 5; k < i - 1; k++) {//빈칸 만드는거
+        output6 += ' '
+      }
+    for(let j = 0; j < 2 * i + 1; j ++) {//*별표 만드는것
+      output6 +='*'
+    } 
+      for(let j = 4; j < 2 * i + 1; j --) {
+        output6 +='*'
+      }
+    output6 += '\n'
+  }
+
+  console.log(output6)
+ </script>
+<!-- 정답은 이거임-->
+
+<script>
+  let output7 = ''
+  
+    for(let i = 0; i < 5; i++) {  //줄만드는거
+      for(let k = 0; k <4 - i; k ++) {
+        output7 += ' '
+      }
+      for(let j = 0; j < 2 * i + 1; j ++) {// *만드는거
+        output7 +='*' 
+      }
+      output7 += '\n' 
+    }
+    
+  console.log(output7)
+  
+  let output8 = ''
+  
+  for(let i = 0; i < 4; i++) {  //줄만드는거
+    for(let k = 0; k < i + 1 ; k ++) {
+      output8 += ' '
+    }
+    for(let j = 0; j < 7 - 2 * i ; j ++) {// *만드는거
+      output8 +='*' 
+    }
+    output8 += '\n' 
+  }
+  
+  console.log(output8)
+
+  </script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+  const array = [1, 2, 3, 4]
+
+  console.log(array.length) //4
+  console.log(array.push(5)) //5
+
+  //array.push는 최종적으로 현재 배열의 요소개수를 출력→그래서 갯수 5가 나오는거임
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ어딘가 문제ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--
+(1)이건 비파괴적처리임
+
+const strA = "사과,배,바나나,귤"
+undefined
+
+strA.split(",")
+(4)["사과","배","바나나","귤"]
+
+strA
+"사과,배,바나나,귤"
+
+(2)파괴적처리임
+
+const arrayB = ["사과", "배", "바나나", "귤"]
+undefined
+
+arrayB.push("감")
+5
+
+arrayB
+["사과", "배", "바나나", "귤","감"]
+
+(3) 비파괴적처리임
+
+const arrayC = [1,2,3,4,5]
+undefined
+
+arrayC.map((x) => x*x)
+(5) [1, 4, 9, 16, 25]-->
+    
+<!--   map 함수에 대한 설명ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+let arr = [3, 4, 5, 6];
+
+let modifiedArr = arr.map(function(element){
+    return element *3;
+});
+
+console.log(modifiedArr); // [9, 12, 15, 18]
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--
+(6)
+
+const strD = " 여백이 포함된 메시지  "
+undefined
+
+strD.trim()
+"여백이 포함된 메시지"
+
+-->
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ191쪽 1번문제ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<script>
+  const array2 = ['사과', '배', '귤', '버내너']
+
+  console.log('# for in 반복문')
+  for(const i in array2) {//forin 반복문은 반복변수의 index가 들어가기 때문에 0,1,2,3을 출력함
+    console.log(i)
+  }
+
+  console.log('# for of 반복문')
+  for (const i of array2) {//forof반복문은 반복변수의 요소의 값이 들어가기 때문에 
+    //사과,배,귤,바나나를 출력할것이다
+    console.log(i)
+  }
+</script>
+<!--
+# for in 반복문
+0
+1
+2
+3
+# for of 반복문
+사과
+배
+귤
+버내너
+undefined  
+이렇게 나옴-->
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ192쪽 2번문제ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+  const array3 = []
+  for(const i = 0; i <3; i++) {
+    array3.push((i + 1) * 3)
+  }
+  console.log(array3)
+//오류가 난다. 이유는 for반복문의 반복변수는 const가 아니라 let이기 때문이다  
+</script>
+
+
+<script>
+  const array4 = []
+  for(let i = 0; i <3; i++) {
+    array4.push((i + 1) * 3)
+  }
+  console.log(array4)
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡp.179쪽 1부터 100까지 더하기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<script>
+  let output = 0
+  for (let i = 1; i <=100; i++) {
+    output += i
+  }
+  console.log(`1부터 100까지 숫자를 모두 더하면 ${output}입니다.`)
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡp.179쪽 1부터 100까지 곱하기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<script>
+  let output = 1
+  for (let i = 1; i <=100; i++) {
+    output *= i
+  }
+  console.log(`1부터 100까지 숫자를 모두 곱하면 ${output}입니다.`)
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->

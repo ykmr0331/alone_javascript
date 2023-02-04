@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    //지금까지 만들어진 Square 객체의 개수를 알고싶을 때(new Square라고 입력한 횟수가 몇번이냐)
+    class Square {
+      static count = 0  //static 속성
+      static test () {  //static 매소드
+
+      }
+
+      constructor (length) {
+        Square.count += 1  //Square클래스의 생성자가 호출되는 시점에 이걸함
+      }
+    }
+
+
+    console.log(Square.count)
+    new Square()
+    new Square()
+    new Square() 
+    console.log(Square.count)
+
+
+</script>
+</head>
+<body>
+  
+</body>
+</html>

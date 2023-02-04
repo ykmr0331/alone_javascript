@@ -1,0 +1,25 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ41강 문서 객체 조작하기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header1 = document.querySelector('#textContent')
+      const header2 = document.querySelector('#innerHTML')
+
+      //조작!
+      //값을 추출한다
+      console.log(header1.textContent)
+      console.log(header2.innerHTML)
+      //값을 넣는다 
+      header1.textContent = '원하는<br>문자열'//<br>이라는 태그를 그냥 text로써 출력
+      header2.innerHTML = '원하는<br>문자열'//<br>html로써 반영한다.
+    })
+  </script> 
+<body>
+  <h1 id = "textContent">textContent 속성 기존 문자열</h1>
+  <h1 id = "innerHTML">innerHTML 속성 기존 문자열</h1>
+</body>
+</html>

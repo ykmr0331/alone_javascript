@@ -1,0 +1,94 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ43강 문서 객체 이벤트 제거 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let counter = 0
+    const listener = () => {
+      header.innerText = `클릭 횟수: ${++counter}`
+    } 
+
+    const header = document.createElement('h1')
+    header.style.userSelect = 'none'//클릭을 여러번 했을 때 ㅋ글자가 선택되는 것을 막기 위한 스타일
+    header.innerText = `클릭 횟수: 0`
+
+    const p = document.createElement('p')
+    p.style.userSelect = 'none'
+    p.innerText = `이벤트 연결 상태: 해제`
+
+    const connectButton = document.createElement('button')
+    connectButton.innerText = '이벤트 연결 버튼'
+    connectButton.addEventListener('click', () => {
+      header.addEventListener('click', listener)
+      p.innerText = '이벤트 연결 상태: 연결'
+    })
+
+    const disconnectButton = document.createElement('button')
+    disconnectButton.innerText = `이벤트 해제 버튼`
+    disconnectButton.addEventListener('click', () => {
+      header.removeEventListener('click', listener)
+      p.innerText = '이벤트 연결 상태: 해제'
+    })
+
+      /*removeEventListener를 사용하기 위해서는  클릭을 연결할 떄 사용했던 eventListener를 
+  별도의 변수로 만들어 줘야 한다.    8~11 얘기임
+  
+   header.addEventListener('click', listener)  만들어주고
+   header.removeEventListener('click', listener)만들어준다  
+
+  */
+
+
+    document.body.appendChild(header)
+    document.body.appendChild(connectButton)
+    document.body.appendChild(disconnectButton)
+    document.body.appendChild(p)
+    </script>
+</body>
+</html>
+
+<!--  326~327  확인문제
+1번: 웹브라우저가 문서 객체를 모두 읽어들였을 때 실행되는 이벤트
+
+DOMContentLoaded
+
+
+
+2번: 다음과 같은 요소를 querySelector()메소드로 선택할 때 사용할 수 있는 선택지를 2개 이상 적어주세요.
+
+  1.<h1 id = "header">제목</h1>
+    -h1
+    -#header
+    -h1#header
+
+  2.<span class= "active">선택</span>
+    -span
+    -.active
+    -span.active
+
+  3.<input id="name-input" type="text"name="name">
+    -input
+    -#name-input
+    -[type=text]
+    -input[type=text][name=name]
+
+3번: 문서객체 내부의 글자를 조작하는 속성이 아닌것은?
+  1.innerText       
+  2.textContent     
+  3.innerHTML         
+  4.htmlContent    이거임
+
+4번:다음 CSS에서 사용하는 스타일 속성들을 자바스크립트 문서객체에서
+     점을 찍고 곧바로 사용할 수 있는 형태의 식별자로 변경해주세요
+
+     예  backgroud-color   ----→  backgroundColor
+
+     1.border-radius  ----→  borderRadius
+     2.font-family    ----→  fontFamily
+     3.line-height    ----→  lineHeight
+     4.width          ----→  width
+     5.box-sizing     ----→  boxSizing  -->

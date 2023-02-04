@@ -1,0 +1,25 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ43강 문서 객체 이벤트 기본 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+     document.addEventListener('DOMContentLoaded', () => {
+       const header = document.createElement('h1')
+       document.body.appendChild(header)
+
+      let count = 0
+      header.style.userSelect = 'none'//클릭할 때 글자가 선택되는게 거슬리면 스타일을 조정하면 된다. 
+      header.innerText = `클릭 횟수: ${count}` 
+      header.addEventListener('click', () =>{ //이벤트 설정하는거
+        count++
+        header.innerText = `클릭 횟수: ${count}` 
+      })
+    })
+  </script>
+</head>
+<body>
+  <h1></h1>
+</body>
+</html>

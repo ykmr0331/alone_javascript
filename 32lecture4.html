@@ -1,0 +1,117 @@
+<!--확인문제240~241-->
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ1번문제  내가한거!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<script>
+//변수를 선언합니다.
+let numbers = [273, 25, 75, 52, 103, 32, 57, 24, 76]
+
+//처리합니다.
+
+    //홀수만 추출,    
+oddnumbers = numbers.filter(function(value)/*콜백함수임*/ {
+  return value % 2 === 1
+})
+
+    //100이하의 수 추출
+under100 = numbers.filter(function(value) {
+  return value <= 100
+})
+
+     //5로 나눈 나머지가 0인 수 추출
+fiveguys = numbers.filter(function(value) {
+  return value % 5 === 0
+})
+
+
+//출력합니다.
+console.log(`홀수는 ${oddnumbers}입니다.`)
+console.log(`100이하의 수는 ${under100}입니다.`)
+console.log(`5로 나눈 나머지가 0인 수는 ${fiveguys}입니다.`)
+
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ1번문제-강사가 한것ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+let numbers = [273, 25, 75, 52, 103, 32, 57, 24, 76]
+
+ //홀수만 추출  
+numbers = numbers.filter((value) => value  % 2 === 1)  //익명함수
+console.log('# 홀수만 추출')
+console.log(numbers)
+
+ //100 이하의 수만 추출     
+numbers = numbers.filter((value) => value  <= 100)  //익명함수
+console.log('# 100 이하의 수만 추출')
+console.log(numbers)
+
+//100 이하의 수만 추출
+numbers = numbers.filter((value) => value % 5===0)   //익명함수
+console.log('# 5로 나눈 나머지가 0인 수만 추출')
+console.log(numbers)
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ2번문제. 밑에꺼를 forEach로해서 바꿔보기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<script>
+const array = ['사과', '배', '귤', '바나나']
+
+console.log('# for in 반복문')
+for (const i in array) {
+  console.log(i)
+  }
+
+console.log('# for of 반복문')
+  for (const i of array) {
+    console.log(i)
+  }
+/*
+
+# for in 반복문
+0
+1
+2
+3
+# for of 반복문
+사과
+배
+귤
+바나나
+
+*/
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡ바꿔서 한거 강의자 설명, 난 하다가 못함ㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>    //forEach()  형식은 function(value,index,array) 
+
+/*
+for 반복문에서 사용할 수 있던 break를 forEach()매서드에서는 구현이 안되므로 break를 해야하는
+경우에는 for반복문을 씁니다.
+*/
+
+const array = ['사과', '배', '귤', '바나나']
+
+console.log('# for in 반복문')  //'#for in 반복문'이 있다고 당황하지 말고 이건 따로 이렇게 구현
+array.forEach(function (value, index, array) {
+  console.log(index)
+}) 
+ 
+console.log('# for of 반복문')
+array.forEach((value, index, array) => {
+  console.log(value)
+}) 
+
+/*
+
+# for in 반복문
+0
+1
+2
+3
+# for of 반복문
+사과
+배
+귤
+바나나
+
+*/
+
+</script>

@@ -1,0 +1,147 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡp.218쪽 5.1절 확인문제ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<!--1번문제 -->
+<script>
+  const multiplyAll = function (start, end) {
+    let output = 1
+    for (let i = start; i <= end; i++) {
+      output *= i
+    }
+    return output
+  }
+
+  console.log(multiplyAll(1,2))
+  console.log(multiplyAll(1,3))
+  console.log(multiplyAll(1,20))
+</script>
+<!--2-1번문제 :  -->
+<script>
+  const max = function (배열) {
+    let output = 배열[0]
+    for (const 값 of 배열) {
+      if (output < 값) {
+        output = 값
+      }
+    }                
+    return output
+  }
+  
+  console.log(max([1, 2, 3, 4]))
+  //4
+</script>
+<!--2-1번이랑 같은결과인데 조금 다름-->
+
+<script>
+  const max = function (...배열) {
+    let output = 배열[0]
+    for (const 값 of 배열) {
+      if (output < 값) {
+        output = 값
+      }
+    }                
+    return output
+  } else {
+    
+  }
+  
+  console.log(max([1, 2, 3, 4])) //4
+</script>
+
+<!--2-2번: max([1, 2, 3, 4])형태와 max(1, 2, 3, 4)형태를 모두 입력할 수 있는 max()함수를 
+만들어 보세요.-->                                                                     
+<script>
+  const max = function (첫번째요소, ...나머지) {
+    if (Array.isArray(첫번째요소)) {//if (typeof(첫번째요소) === 'number')
+    let output = 첫번째요소[0]
+    for (const 값 of 첫번째요소) {
+      if (output < 값) {
+        output = 값
+      }
+    }                
+    return output
+  } else {
+    let output = 첫번째요소
+    for(const 값 of 나머지) {
+      if (output < 값) {
+        output = 값
+      }
+    }
+    return output
+ }  
+}
+console.log(max([1, 2, 3, 4]))//4
+console.log(max(1, 2, 3, 4))//4
+
+</script>
+<!--p.214 구 버전 자바스크립트에서 가변 매개변수 함수 구현하기  7분 10초ㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--일단 arguments함수에 대해-->
+
+<script>
+  const max = function () {
+    console.log(arguments)
+  }  
+
+  console.log(max(1, 2, 3, 4))
+/*  Arguments(4) [1, 2, 3, 4, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+    undefined
+    undefined                                                                 이렇게 나옴 */
+</script>
+<!-- 우리가 넣지 않은 녀석들이 몇개 포함되어있음( callee: ƒ, Symbol(Symbol.iterator): ƒ)
+이렇게 두개가.  
+따라서 단순한 for in 반복문같은것으로 반복을 돌리게 되면 이 arguments는 문제가 발생한다.
+
+따라서 얘는 기존의 for 반복문으로 반복을 돌려줘야하고 , 
+반복을 돌릴 때 arguments가 length라는 형태를 사용해서 반복을 돌려줘야한다. 
+
+밑에처럼 수정해보면된다
+
+밑에 크게 변한 내용은 없고, 기존에 나머지 매개변수를 사용하던 녀석이 
+아규먼츠로 교체가 되었다. 
+
+그리고 이녀석을 배열로 반복을 돌리 떄는 
+for in 반복문이나 of반복문을 사용 할 수 없다. 
+
+따라서 지금 이와같은 고전적인 for 반복문의 형태로 돌려야한다.↓↓↓↓↓↓↓↓↓
+
+사실 자바스크립트에서 잘 안쓰임-->
+<script>
+  const max = function () {
+    let output = arguments[0]
+    for (let i = 0; i < arguments.length; i++) {
+      const 값 = arguments[i];
+      if (output < 값) {
+        output = 값
+      }
+    }
+    return output
+  }
+  
+  console.log(max(1,2,3,4))
+</script>
+
+<!--ㅡㅡㅡㅡㅡ구 버전 자바스크립트에서 전개연산자 구현하기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+  const input = [1, 2, 3, 4]
+  console.log(max(...input)) //max(1,2,3,4)//최신 자바스크립트에서만 사용가능
+    /*어떤 배열이 있을 떄 이 배열을 ...을 찍고 분해를 해서 전달하는 녀석이다. */
+  console.log(max.apply(null/*null은 '없다'는뜻*/,input))//최신말고(위에랑 같은거임)
+  //input이 전개되어서 들어가겠구나라고 생각해면 된다.
+
+</script>
+
+<script>
+const max = function () {
+  let output = arguments[0]
+  for (let i = 0; i < arguments.length; i++) {
+    const 값 = arguments[i];
+    if (output < 값) {
+      output = 값
+    }
+  }
+  return output
+}
+
+const input = [1, 2, 3, 4]
+console.log(max(...input)) // max(1, 2, 3, 4)// 최신자바스크립트에서만 사용가능
+console.log(max.apply(null,input))
+</script>

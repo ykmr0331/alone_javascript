@@ -1,0 +1,29 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ45강 입력양식:버튼ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=> {
+      const buttonA = document.querySelector('button')
+      const buttonB = document.querySelector('input[type=button]')
+      buttonA.addEventListener('click', (event) => {
+        event.currentTarget.textContent += '글자'
+      })
+      buttonB.addEventListener('click', (event) => {
+        event.currentTarget.value += '글자'
+      })
+    })
+  </script>
+</head>
+<body>
+  <!-- click 이벤트! -->
+  <button>글자</button>
+  <input type="button" value="글자">
+  <!-- submit 이벤트![click 이벤트도 가능하지만.. 거의 사용 안함] -->
+  <form action = "">
+    <input type="submit" value="글자">
+  </form>  
+</body>
+</html>

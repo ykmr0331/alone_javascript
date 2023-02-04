@@ -1,0 +1,24 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡ44강  이벤트 객체, 이벤트 발생 객체, 기본 이벤트ㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--349 기본 이벤트 막기-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const a =document.querySelector('a')
+      a.addEventListener('click', (event) => {
+        event.preventDefault()//이게 기본이벤트막기임
+      })
+      a.addEventListener('contextmenu', (event) => {
+        event.preventDefault()//이거는 링크에 마우스 오른쪽을 클릭했으 때 안뜸
+      })  //블로그에서 마우스 오른쪽 클릭 막을때 쓰는거임
+    })
+  </script>
+</head>
+<body>
+  <a href="http://hanbit.co.kr">링크</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!--<script>
+  const date = new Date()
+  date.getFullYear() //올해
+  date.getMonth()    //이번달
+  date.getDate()      //오늘
+  date.getHours()     //지금시
+  date.get
+</script>-->
+
+<!--오전과 오후를 구분해보기-->
+<script>
+  const date = new Date()
+  const hours = date.getHours() // 현재 시간을 추출한것임
+
+  if (hours < 12) {
+     alert(`현재 시간은 ${hours}시로 오전입니다 !`)
+  }
+  if (hours >= 12) {
+    alert(`현재 시간은 ${hours}시로 오후입니다!`)
+  }
+</script>

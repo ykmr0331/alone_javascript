@@ -1,0 +1,36 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ문서객체 이동하기  타이머관련테크닉 2ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.createElement('h2')
+      header.textContent = '안녕하세요'
+       /*문서객체 이동하기  타이머관련테크닉 2, ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ */ 
+      const array = [
+        document.querySelector('.first'),
+        document.querySelector('.second'),
+      ]
+      let 카운터 = 0
+      const fun = () => {   //
+        array[카운터 % 2].appendChild(header)
+        카운터++
+      }
+      setInterval(fun, 1000)  
+      fun() //이전의 timeout과 같게 나오려고, 처음에 1초동안 안나오기때문에 이거 한듯
+    })
+  </script>    
+</head>
+<body>
+  <div class="first">
+    <h1>첫 번째 div 태그 내부</h1>
+  </div>
+  <hr>
+  <!--div 두개 구분지을려고-->
+  <div class="second">
+    <h1>두 번째 div 태그 내부</h1>
+  </div>
+</body>
+</html>

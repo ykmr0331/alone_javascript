@@ -1,0 +1,37 @@
+<script> 
+  const hours = (new Date()).getHours()
+  /*  참고하기
+  생성된 Date 객체의 메서드를 사용하여 시, 분, 초, 밀리초를 가져옵니다.
+  
+  getHours() 메서드는 생성된 Date 객체에서 시간(0 ~ 23)을 가져옵니다.
+  
+  getMinutes() 메서드는 생성된 Date 객체에서 분(0 ~ 59)을 가져옵니다.
+  
+  getSeconds() 메서드는 생성된 Date 객체에서 초(0 ~ 59)를 가져옵니다.
+  
+  getMilliseconds() 메서드는 생성된 Date 객체에서 밀리초(0 ~ 999)를 가져옵니다.
+  */
+  if(hours <10) {
+    alert(`아침밥 먹을 시간입니다.`)
+  }
+  if(10 <= hours && hours <16) {
+    alert(`점심밥 먹을 시간입니다.`)
+  }
+  if(16<= hours) {
+    alert(`저녁밥 먹을 시간입니다.`)
+  } 
+  </script>
+  <!--아래처럼 바꿀 수도 있다. 이게 더 간단ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script> 
+
+  const hours = (new Date()).getHours()
+  if(hours <10) {  
+    alert(`아침밥 먹을 시간입니다.`)
+  } else if(hours <16) {/*10<=hours를 빼도 문제가 없다. 이유는 else라는 것이
+      이미 hours<10의 반대를 포함하고 있기 때문*/
+    alert(`점심밥 먹을 시간입니다.`)
+  }else{/*여기서 16<=hours가 빠진 이유는 바로옆 else가 다 포함하기 때문*/
+    alert(`저녁밥 먹을 시간입니다.`)
+  } 
+</script>
+  

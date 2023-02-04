@@ -1,0 +1,54 @@
+<!--if else 조건문-->
+
+
+<!--형식은
+
+if(불_표현식){
+  불표현식이 true일 때 실행하는 문장
+}else {
+  //불 표현식이 false일 때 실행하는 문장
+}                               
+
+이런식으로 쓴다-->
+
+<script>
+  const date = new Date()
+  const hours = date.getHours()  //지금 시간
+
+  if (hours < 12){
+    //불 표현식이 true일 때 실행하는 문장
+    alert(`현재 시간은 ${hours}시로 오전입니다.`)
+  } else{
+    //불 표현식이 false 일 때 실행하는 문장
+    alert(`현재 시간은 ${hours}시로 오후입니다.`)
+  }
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡif else 조건문 개요ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+  오전 10시 이전 → "아침밥 먹을 시간입니다."
+  오전 10시~오후4시 → "점심밥 먹을 시간입니다."
+  오후 4시 이후 → "저녁밥 먹을 시간입니다."
+-->
+<script> 
+const hours = (new Date()).getHours()
+/*  참고하기
+생성된 Date 객체의 메서드를 사용하여 시, 분, 초, 밀리초를 가져옵니다.
+
+getHours() 메서드는 생성된 Date 객체에서 시간(0 ~ 23)을 가져옵니다.
+
+getMinutes() 메서드는 생성된 Date 객체에서 분(0 ~ 59)을 가져옵니다.
+
+getSeconds() 메서드는 생성된 Date 객체에서 초(0 ~ 59)를 가져옵니다.
+
+getMilliseconds() 메서드는 생성된 Date 객체에서 밀리초(0 ~ 999)를 가져옵니다.
+*/
+if(hours <10) {
+  alert(`아침밥 먹을 시간입니다.`)
+}
+if(10 <= hours <16) {
+  alert(`점심밥 먹을 시간입니다.`)
+}
+if(16<= hours) {
+  alert(`저녁밥 먹을 시간입니다.`)
+} 
+</script>

@@ -1,0 +1,32 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ문서객체 이동하기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--ㅡㅡㅡㅡㅡㅡㅡ42lecture4.html이랑 42lecture5.html도 봐라ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.createElement('h2')
+      header.textContent = '안녕하세요'
+
+      const first = document.querySelector('.first')//311쪽 문서객체 가져오기
+      const second = document.querySelector('.second')
+      first.appendChild(header)
+      setTimeout(() => {
+        second.appendChild(header)  //문서객체를 이동할 떄
+      },2000)
+    })
+
+  </script>    
+</head>
+<body>
+  <div class="first">
+    <h1>첫 번째 div 태그 내부</h1>
+  </div>
+  <hr><!--div 두개 구분지을려고-->
+  <div class="second">
+    <h1>두 번째 div 태그 내부</h1>
+  </div>
+</body>
+</html>

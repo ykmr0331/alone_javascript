@@ -1,0 +1,122 @@
+<!--p.287~p.289  확인문제제-->
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡ1번문제: 다음 코드의 실행 결과를 예측해보세요.ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<script>
+
+const num = 52000
+
+num.원 = function () {  /*기본자료형에다가 메서드를 추가하고 있기 때문에
+                         이 메서드가 추가되는 직후 바로 사라진다. 
+                         따라서 console.log(num.원())에서 
+                         number에는 이런 메서드가 없다는 오류가 생김 */
+  return this.valueOf() + '원'
+}
+
+console.log(num.원())
+</script>
+<!--따라서-->
+<script>
+const num = 52000
+
+Number.prototype.원 = function () {  
+  return this.valueOf() + '원'
+}
+
+console.log(num.원())
+
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡ2번문제: 다음 코드의 실행 결과를 예측해보세요.ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<script>
+  function printLang(code) {
+    return printLang._lang[code]
+
+  }
+  printLang._lang = {
+    ko: '한국어',
+    en: '영어',
+    ja: '일본어',
+    fr: '프랑스어',
+    es: '스페인어'
+
+  }
+  console.log('printLang("ko"):', printLang('ko'))
+  console.log('printLang("en"):', printLang('en'))
+  
+</script>
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡ3번문제: 사인 90도의 값을 구해보세요.ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<script>
+  //변수를 선언합니다.
+  const degree =90
+
+  //출력합니다.
+  Math.sin(90) 
+  /*0.8939966636005579 나온다. 우리는 이게 1이 나와야 되므로 구글링을 해서 
+  이 오류를 해결해야한다*/
+</script>
+
+<script>
+  //변수를 선언합니다.
+  const degree =90
+  const rad = degree * Math.PI / 180
+
+  //출력합니다.
+  // 구글에 들어가서 javascript math sin 사용법을 검색해보자
+  console.log(Math.sin(rad))
+</script>
+
+  <!--ㅡㅡㅡㅡㅡㅡㅡㅡ5번문제ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<script>
+    const books = [{
+      name: '혼자 공부하는 파이썬',
+      price: '18000',
+      publisher: '한빛미디어'
+    }, {
+      name: 'HTML5 웹 프로그래밍 입문',
+      price: '26000',
+      publisher: '한빛 아카데미'
+    }, {
+      name: '머신러닝 딥러닝 실전 개발 입문',
+      price: '30000',
+      publisher: '위키북스'
+    }, {
+      name: '딥 러닝을 위한 수학',
+      price: '25000',
+      publisher: '위키북스'
+    }]
+    
+    const output = _.orderBy(books, ['name'], ['asc'])
+    console.log(output)
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

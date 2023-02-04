@@ -1,0 +1,25 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡ44강  이벤트 객체, 이벤트 발생 객체, 기본 이벤트ㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--331페이지 남은 글자 수 출력하기-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const h1 = document.querySelector('h1')
+      const textarea = document.querySelector('textarea')
+      textarea.addEventListener('keyup', () => {
+        h1.textContent = `글자 수: ${textarea.value.length}`        
+      })
+    })  /*단점은 키보드를 떼지 않는 이상 글자수가 나타나지 않는다. 이 문제는 keypress로
+    해결할 수 있지만 아시아계문자는 가끔씩 브라우저마다 안되는 경우도 있다 */
+  </script>
+</head>
+<body>
+  <h1>글자 수: 0</h1>
+  <textarea></textarea>
+</body>
+</html>

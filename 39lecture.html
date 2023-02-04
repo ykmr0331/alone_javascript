@@ -1,0 +1,63 @@
+<!--mㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ39강 라이브서버와 DOMContentLoadeㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      //문서객체 조작가능!
+    })
+    //이 이벤트 코드같은 경우에는 이 이벤트(DOMContentLoaded)가 발생했을 때 뒤에 있는 콜백함수(  () => {})  )를 실행해달라는 것이다.
+  </script>
+  <script>document.body.innerHTML += '<h1>A</h1>'</script>  <!--head 태그 안에 script 태그-->  <!--A가  출력이 안되는데 ,A를 추가하는 시점에는 아직 바디태그가 만들어지지 않았기 때문에 바디태그를 조작할 수 없다는 의미입니다.-->
+</head>
+<body>
+  <script>document.body.innerHTML += '<h1>B</h1>'</script>  <!--body 태그 안의 요소 위에 script 태그-->  <!-- 반면에 B와 C는 바디태그를 읽었기 때문에 출력됨, -->
+
+  <h1>안녕하세요!</h1>
+  <script>document.body.innerHTML += '<h1>C</h1>'</script>   <!-- body 태그 안의 요소 아래에 script 태그--> 
+  <script> //문서객체 조작가능! </script>
+
+  <!--그래서(,A를 추가하는 시점에는 아직 바디태그가 만들어지지 않아 출력 XX) 
+  우리과 화면에 있는 태그들을 조작하기 위해서는 그 태그가 생성된 이후에 스크립트 태그를 놓아서 사용해야한다. 그래서 가장 마지막에 있는 c위치에서 요소들을 조작 할 수 있는데 ,
+  우리가 html문서를 보게되면 스크립트 태그는 최대한 헤드 태그 안에 놓아달라는 표현이 있다. 그래서 해드태그 안에서 문서객체 조작을 하고 싶어함 
+  그래서 이 안에서 조작할 수 있게 문서객체가 모두 만들어진 다음에 이 함수를 실행해달라는 코드를 사용하게 된다.
+  이게 바로 
+  document.addEventListener.('DOMContentLoaded', ( => {
+
+  }))
+  
+  이거임
+
+  그래서 문서객체를 조작할 수 있는 위치는
+   해드태그 안에 스크립트 태그 안에   DOMContentLoaded이벤트 내부
+  또는 바디태그 마지막에 배치한 스크립트 태그 
+  두군데임
+  -->
+</body>
+</html>
+
+<!--mㅡㅡㅡㅡㅡ문서객체모델(DOMContentLoaded이벤트)ㅡㅡㅡㅡㅡ
+
+문서객체모델
+Document Object Model
+→DOM
+
+DOMContentLoaded 이벤트
+→이벤트 무엇인지? → 이후!
+→이걸 왜 서야하는지!
+→어떻게 써야하는지!
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+
+
+
+<!--
+
+document.body.innerHTML += '<h1></h1>'   바디 태그 안에 있는 html코드를 추가할 수 있다. 
+                                         위에 보면 이해함
+
+innerHTML: 문자열 → += '<h1></h1>'  즉 문자열을 추가할 수 있는 코드라는 의미
+
+-->

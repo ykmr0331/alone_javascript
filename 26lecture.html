@@ -1,0 +1,92 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ함수 기본예제  26강ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+
+<!--25강에서 배운거-->
+
+<script> //익명 함수
+const f = function(매개변수,매개변수) {
+  return 리턴값
+}
+</script>
+
+
+<!--ㅡㅡㅡㅡㅡ근데 이렇게 생긴것도 있음ㅡㅡㅡㅡㅡㅡㅡㅡp.198~199-->
+
+
+<script>// 선언적 함수
+function f (매개변수, 매개변수) {
+  return 리턴값
+}
+</script>
+<!--위에랑 같은거라고 하네-->
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡ윤년을 확인하는 함수만들기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+
+<!--
+-4로 나누어 떨어지는 해는 윤년이다   
+-하지만 100으로 나누어 떨어지는 해는 윤년이 아니다.
+-하지만 400으로 나누어 떨어지는 해는 윤년이다.
+
+여기서  isLeapYear()라는 함수로 이를 구현할 수 있다.
+-->
+<script>
+  const isLeapYear = function(연도) {  
+  return (연도 % 4 === 0)
+    && (연도 % 100 !== 0)
+    || (연도 % 400 === 0)
+}
+
+console.log(`2020년은 윤년일까? === ${isLeapYear(2020)}`)
+console.log(`2010년은 윤년일까? === ${isLeapYear(2010)}`)
+console.log(`2000년은 윤년일까? === ${isLeapYear(2000)}`)
+console.log(`1900년은 윤년일까? === ${isLeapYear(1900)}`)
+
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡ최솟값을 구하는 함수ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<script>
+  const min = function (배열) {  //여기서 min은 최솟값 함수가 아니라 그냥 이름이다!!
+    let output = 배열[0]
+    console.log(`처음 실행 때의 output = ${output}`)
+
+    for (const value of 배열) {
+      console.log(`현재 비교 대상 ${output}과 ${value} 중에 작은 것은?`)
+      if (output > value) {
+        output = value
+      }
+      console.log(`=${output}`)
+    }
+    return output
+  }
+
+  console.log(min([52, 273, 32, 103, 275, 24, 57]))
+/*
+설명하자면 min은 배열로 지정하고, 배열의 첫번째요소로 지정하고,
+배열의 첫번째 요소를 output으로 지정해서, 
+output을 for of랑 if함수를 통해 value랑 비교해서,
+output은 배열 첫번째 요소이자 최솟값이 된다. 
+마지막으로 이것 자체가 min이다.
+
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡ최댓값을 구하는 함수ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ -->
+<script>
+  const max = function (배열) {  //여기서 min은 최솟값 함수가 아니라 그냥 이름이다!!
+    let output = 배열[0]
+    console.log(`처음 실행 때의 output = ${output}`)
+
+    for (const value of 배열) {
+      console.log(`현재 비교 대상 ${output}과 ${value} 중에 큰 것은?`)
+      if (output < value) {
+        output = value
+      }
+      console.log(`=${output}`)
+    }
+    return output
+  }
+
+  console.log(max([52, 273, 32, 103, 275, 24, 57]))
+/*
+설명하자면 min은 배열로 지정하고, 배열의 첫번째요소로 지정하고,
+배열의 첫번째 요소를 output으로 지정해서, 
+output을 for of랑 if함수를 통해 value랑 비교해서,
+output은 배열 첫번째 요소이자 최솟값이 된다. 
+마지막으로 이것 자체가 min이다.
+
+</script>

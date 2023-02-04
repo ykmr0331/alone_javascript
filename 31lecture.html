@@ -1,0 +1,74 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡ타이머함수 즉시호출함수(IIFE), 엄격모드ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+
+
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ타이머함수ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+//첫번째 매개변수에다가 콜백함수를 넣어주고,
+//두번째 매개변수에는 밀리초 매개변수를 넣어준다. 2000은 2초다
+setTimeout(function() {
+  console.log('setTimeout 함수 입니다!')
+}, 1000)        
+
+
+setInterval(function() {
+  console.log('setInterval 함수 입니다!')
+},1000)
+
+
+</script>
+<!--ㅡㅡㅡㅡㅡ좀더 자세하게ㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+const a = setTimeout(function () {
+  console.log('setTimeout 함수 입니다!')
+}, 1000)        
+const b = setInterval(function () {
+  console.log('setInterval 함수 입니다!')
+},1000)
+
+console.log(a,b)
+
+clearTimeout(a)
+clearInterval(b)
+
+
+/*
+1초 후에 실행하라고 그랬는데, 위쪽에서 아래로 지나가면서 
+설정했던 타이머를 취소하는 일이 먼저 일어납니다.
+
+clearTimeout(a)
+clearInterval(b)   이거 두개 때문인듯
+
+그래서 최종적으로 console.log(a,b)만 출력하고
+
+콜백함수 내부에서 입력했던   
+console.log('setTimeout 함수 입니다!')
+console.log('setInterval 함수 입니다!')
+이 두개는 호출하지 않는다.
+  
+*/
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ즉시호출함수ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+//우리가 인터넷에서 여러 코드를 보다보면 하나의 상수에 두개의 값이 입력되는 경우 충돌을 피하기위해
+(function () {})()
+//또는
+(() => {})()
+//이런식으로 되어있다.
+</script>
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+const a = function () {}
+a()
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ62-63과 65-66은 같은거
+const a =
+(function () {})()
+
+//여기서부터는 31lecture2.html에서 보자
+</script>
+
+
+
+
+

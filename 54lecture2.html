@@ -1,0 +1,36 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ54강 예외처리ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const h1 = document.querySelector('h1')
+      
+      try {
+        h1.textContent = '변경!'
+      } catch (예외_객체) {
+        console.log('오류가 발생했습니다!')
+        console.log(예외_객체)
+        console.log(예외_객체.name)
+        console.log(예외_객체.message)
+      } 
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html> 
+<!--
+
+      try {
+        //예외가 발생할 가능성이 있는 코드
+      } catch (error) {
+        //예외가 발생했을 때 실행할 코드
+      } finally {
+        //무조건적으로 실행되는 코드!
+      }
+
+-->

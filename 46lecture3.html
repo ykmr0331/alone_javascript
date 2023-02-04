@@ -1,0 +1,38 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ46강 입력양식: 글자입력 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+
+<!--p.339 inch를 cm로 변환하는거거에서
+버튼을 누르지 않아도 키를 입력만해도 cm로 바뀌도록
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=> {
+      const input = document.querySelector('input')
+      //const button = document.querySelector('button')      
+      const p = document.querySelector('p')
+
+      //value 속성: 값 추출!
+      //keydown→keypress → 입력양식에 값이 들어감! → keyup
+      //change 이벤트: 입력 양식 전체에 값 입력을 마쳤을 때  
+      input.addEventListener('change', () => {
+        p.textContent = `${Number(input.value) * 2.54}cm로 변환되었습니다.`
+      })
+    })
+  </script>
+</head>
+<body>
+  <input type="text" name="" id=""></input> inch<br>
+  <p></p>
+</body>
+</html>
+
+<!--46강 정리
+      //value 속성: 값 추출!
+      //keydown→keypress → 입력양식에 값이 들어감! → keyup
+      //change 이벤트: 입력 양식 전체에 값 입력을 마쳤을 때  
+-->

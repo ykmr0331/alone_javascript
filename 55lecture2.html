@@ -1,0 +1,30 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ54강 예외처리ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--throw구문-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    const getPerimeter = (r) => {  //getPerimeter는 원의 둘레를 구하는 함수
+      if (r < 0) {/*함수에서 매개변수로 음수가 들어왔을 떄 처리를 해서 음수가 입력되면 지금 당장은 오류가 없지만 ,나중에 문제 발생*/
+        throw '길이는 음수가 될 수 없습니다.'
+      }
+      const pi = 3.14
+      return 2 * pi * r
+    }
+
+    try {
+      console.log(getPerimeter(-10))
+    } catch (e) {
+      console.log('어떤 문제가 발생했습니다.')
+    }
+    console.log('프로그램이 정상적으로 종료되었습니다.')
+  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

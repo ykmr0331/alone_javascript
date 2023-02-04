@@ -1,0 +1,56 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡ38강 - 객체의 기본 속성 지정하기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<script>
+//객체 기본값을 지정하는 내용!
+
+const test =function (name, age, color, status = '이상 없음') {  //이상없음을 적은건 언급이 없을 때 기본값이라는 것임
+  return `${name} : ${age} : ${color} : ${status}`
+}
+
+console.log(test('구름', 7, '갈색'))
+//이 형태로 함수를 더 많이 많든다 읽는게 더 중요해져서
+
+
+const test =function (object) {
+  return `${object.name} : ${object.age} : ${object.color}`
+}
+
+console.log(test({
+  name: '구름',
+  age: 7,
+  color: '갈색'
+}))
+
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ객체 기본 매개변수 지정방법ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+const test = function(object){
+//과거(1)
+object.status = object.status !== undefined ? object.status : '이상 없음'
+//과거(2)
+object.status = object.status ? object.status : '이상 없음'
+//과거(3)
+object.status = object.status || '이상없음'
+
+//현대(1)
+object = { status: '이상없음', ...object}
+//현대(2)
+fun = function ({name, age, color, status = '이상없음'}) {
+  return `${name} : ${age} : ${color} : ${status}`
+}
+
+
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+  return `${name} : ${age} : ${color} : ${status}`
+}
+console.log(test({
+  name: '구름',
+  age: 7,
+  color: '갈색'
+}))
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+const {name.age,color,status}
+
+
+
+
+
+
+</script>

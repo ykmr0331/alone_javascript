@@ -1,0 +1,32 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ45강 입력양식:버튼ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<!--submit 이벤트 개요-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('form')
+      form.addEventListener('submit', (event) => {
+        const text = document.querySelector('input[type=text]')
+        if(text.value.indexOf('@') >= 0) {
+          alert('정상적으로 제출합니다!')
+        } else {
+          alert('이메일 형식을 입력해주세요!')
+          event.preventDefault()
+        }
+      })
+    })
+  </script>
+</head>
+<body>
+  <!-- submit 이벤트![click 이벤트도 가능하지만.. 거의 사용 안함] -->
+  <form action = "">
+    이메일 형식을 입력해주세요!<br>
+    <input type="text" name="test" id="">
+    <input type="submit" value="글자">
+  </form>  
+</body>
+</html>

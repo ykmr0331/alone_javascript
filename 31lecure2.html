@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const a = 10
+  </script>
+  <script>
+    const a = 20
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+<!--a가  두번 정의돼서 console창에서 오류가 나는것을 알 수 있다.-->
+<!-- 
+프로그래밍 직업 상 여러사람이 같이 할 가능성이 높기 때문에 
+이럴 떄 즉시 호출함수를 쓴다.  밑에처럼    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    (function() {       //즉시호출함수
+      const a = 10    
+      console.log(a)
+    })()
+  </script>
+
+  <script>
+    (function () {        //즉시호출함수
+    const a = 20
+    console.log(a)
+
+    })()
+  </script>
+
+</head>
+<body>
+  
+</body>
+</html>

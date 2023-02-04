@@ -1,0 +1,38 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ 47강 입력양식: 선택상자ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+<!--다중선택상자 사용하기-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const select = document.querySelector('select')
+      const p = document.querySelector('p')
+
+      select.addEventListener('change', (event) => {
+        const options = event.currentTarget.options
+        const index = options.selectedIndex
+        const list = []
+        for (const option of options) {
+          if(option.selected) {
+            list.push(option.textContent) //선택에서도 클릭하는거 다 선택됨
+          }
+        }
+        p.textContent = `선택: ${list.join(',')}`
+      })
+    })
+  </script>
+</head>
+<body>
+  <select name="" id=""multiple>  <!--일단 multiple을 지정해줘야,  컨트롤이랑 시프트 사용해서 잘해봐-->
+    <option value="">떡볶이</option>
+    <option value="">순대</option>
+    <option value="">오뎅</option>
+    <option value="">튀김</option>
+  </select>
+  <p>선택:</p>
+</body>
+</html>

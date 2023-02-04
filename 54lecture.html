@@ -1,0 +1,21 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ54강 예외처리ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const h1 = document.querySelector('h1')
+      if (h1 === null) {
+        console.log('오류가 발생했습니다!')//실제로 h1은 body태그에 존재하지 않으니까 
+      } else {                             //if 조건문으로 예외 처리하기
+        h1.textContent = '변경!'           //
+      }
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html> 

@@ -1,0 +1,30 @@
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ46강 입력양식: 글자입력 ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+
+<!--p.339 inch를 cm로 변환하는거거에서
+textarea로 태그를 변경해서해보자
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=> {
+      const textarea = document.querySelector('textarea')
+      const button = document.querySelector('button')      
+      const p = document.querySelector('p')
+       
+      button.addEventListener('click', () => {
+        p.textContent = `${Number(textarea.value) * 2.54}cm로 변환되었습니다.`
+      })
+    })
+  </script>
+</head>
+<body>
+  <textarea type="text" name="" id=""></textarea> inch<br>
+  <button>계산</button>
+  <p></p>
+</body>
+</html>

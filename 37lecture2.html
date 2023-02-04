@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src = "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+  
+    const books = [{
+      name: '혼자 공부하는 파이썬',
+      price: '18000',
+      publisher: '한빛미디어'
+    }, {
+      name: 'HTML5 웹 프로그래밍 입문',
+      price: '26000',
+      publisher: '한빛 아카데미'
+    }, {
+      name: '머신러닝 딥러닝 실전 개발 입문',
+      price: '30000',
+      publisher: '위키북스'
+    }, {
+      name: '딥 러닝을 위한 수학',
+      price: '25000',
+      publisher: '위키북스'
+    }]
+    
+    const output = _.orderBy(books, ['name'], ['asc'])
+    console.log(output)
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
+
+<!--라이브러리는  시간을 다룰 때는 Luxon을 많이 활용하고
+  handsontable은 프레드시트? 만들기 쉽고
+  D3.js는 데이터 시각화를 손쉽게 할 수 있다.
+  chart.js 를 활용해서 간단한 그래프 출력
+  three.js를 활용해서 3d 삼차원 그래프까지도 다룰 수 있다.
+
+
+
+-->

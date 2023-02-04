@@ -1,0 +1,127 @@
+<!--ㅡㅡㅡㅡㅡ35강 기본자료형과 객체자료형, 프로토타입ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+
+
+<!--자바스크립트의 모든 자료는 기본적으로 기본자료형, 객체자료형으로 구분된다.--> 
+  
+  <script>
+/*
+●기본자료형 스택에 값을 저장
+-숫자
+-문자열
+-불
+
+●객체자료형 스택과 힙을 연결 속성과 매서드(자신의 크기를 늘릴 수 있기 떄문)
+
+-함수
+-배열
+-객체
+-등등
+ */   
+</script>
+<!--ㅡㅡㅡㅡ객체 자료형에 속성과 매서드 추가해보기ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--객체자료형은 모두 속성과 매소드를 추가할 수 있다.
+
+const a =[]
+undefined
+a.내맘대로속성 =10
+10
+a.내맘대로속성
+10
+delete a.내맘대로속성
+true
+a.내맘대로속성
+undefined
+
+const b = function () {}
+undefined
+b.value = 10
+10
+b.value
+10
+
+-->
+
+<!--기본자료형은 속성과 매소드를 추가할 수 없다. ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ-->
+<!--
+
+const c =10
+undefined
+c.value = 20
+20                //들어간것처럼 보이지만 밑에 c.value를 입력했을 때 안된다. 
+c.value
+undefined
+
+
+-->
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡ배열자료 확인하기 p.257밑에 얘기임ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+
+const a = []
+undefined
+
+typeof(a)            
+'object'             
+
+Array.isArray(a)     //배열인지 확인하기 위해서는 쓴다
+true                  
+
+Array.isArray(10)
+false
+
+Array.isArray({})    /배열이 아닌 숫자나 객체를 넣어주면 false나옴
+false
+-->
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡ함수자료 확인하기 p.257밑에 얘기임ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+const b = () => {}
+undefined
+
+typeof(b)
+'function'                //function이면 함수인것
+
+typeof(b) === 'function'  // 어떠한 자료형이 함수인지 확인하고 싶으면 이렇게
+true
+
+//함수를 객체처럼 쓰는 언어는 
+"함수를 일급객체(first-class object)로 다룬다"라고 표현한다.
+-->
+
+<!--ㅡㅡㅡㅡㅡㅡㅡㅡㅡ기본자료형을 기본자료형이 아닌 객체자료형으로 선언하는 방법ㅡㅡㅡㅡㅡㅡ
+
+const a =new Number(10)
+undefined
+
+const b =new String('문자열')
+undefined
+
+const c = new Boolean(true)
+undefined
+
+typeof(a) + ' ' + typeof(b) + ' ' + typeof(c)
+'object object object'
+
+a.value = 10
+10
+
+a.value
+10
+
+이렇게 객체로 만들어진 숫자들은 점.을 찍었을 때 여러가지매소드들을 활용할 수 있게 된다.
+
+
+-->
+<!--ㅡㅡㅡㅡㅡ프로토타입으로 메소드 추가하기
+
+String.prototype.contain = function (다른문자열) {
+    return this.indexOf(다른문자열) >= 0 
+  }
+
+  const a = '문자열'
+  console.log(`a.contain('문자'): ${a.contain('문자')}`)
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ결과는 밑에처럼 나온다
+a.contain('문자'): true
+
+이렇게 하는이유 큰 프로젝트에서 '문자열.indexOf(다른문자열) >= 0'을 1000번 쓴다면 귀찮기때문
+-->
