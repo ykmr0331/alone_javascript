@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    const object = {
+      "with space": 273,               // 식별자로 사용할 수 없는 단어랄 키로 사용할 때는 문자열을 사용합니다.  (이거는 빈칸잇어서)
+      "with ~!@# $%^&*()_+": 52        //(이거는 특수만자와 빈칸)
+    }
+
+    //객체의 요소에 접근합니다.
+    object["with space"]
+    object["with ~!@# $%^&*()_+"]        
+
+    console.log(object["with space"])
+    console.log(object["with ~!@# $%^&*()_+"])        
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
