@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+  <script>
+    //변수를 선언합니다.
+  const test = {
+    a : function () {
+      console.log(this)
+    },
+
+    b: () => {
+      console.log(this)
+    }
+  }
+
+  //메소드를 호출합니다.
+  test.a()
+  test.b()
+      /*값이 둘다 다르게 나오는데 화살표 함수를 사용하면, 메소드 내부에서 this 키워드를 사용할 때 
+      의미가 달라지므로 화살표 함수를 메소드로 사용하지 않는 편이다*/
+      // 그래서 메소드를 만들 때 특별한 이유가 있지 않은 한 화살표 함수를 사용하지 않습니다.
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
