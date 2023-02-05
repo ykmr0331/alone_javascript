@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+  <script>
+    //power() 메소드를 추가합니다.
+    Number.prototype.power = function (n =2) {        //숫자에 power라는 메소드(함수)를 추가하는거다 
+      return this.valueOf() ** n
+    }
+
+    //Number 객체의 power()메소드를 사용합니다.
+    const a = 12
+    console.log('a.power():', a.power())     //144
+    console.log('a.power(3):', a.power(3)) //1728  12^3 이므로
+    console.log('a.power(4):', a.power(4))   //20736 12^4 이므로
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
