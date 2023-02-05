@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+  <script>
+  //문자열 양쪽 끝의 공백 없애기: trim()
+  const stringA = `\n
+  메시지를 입력하다보니 앞에 줄바꿈도 들어가고`
+
+  const stringB = `    앞과 뒤에 공백도 들어가고    `
+
+  console.log(stringA)
+  console.log(stringB)
+
+  stringA.trim()
+  console.log(stringA.trim())
+  stringB.trim()
+  console.log(stringB.trim())
+  
+  //문자열을 특정 기호로 자르기: split()
+  let input = `
+  일자,달러,엔,유로
+  02,1141.8,1097.46,1262.37
+  03,1148.7,1111.36,1274.65
+  04,1140.6,1107.81,1266.58
+  07,1143.4,1099.58,1267.8
+  08,1141.6,1091.97,1261.07
+  `
+  input = input.trim()
+  console.log(input.trim())
+
+  input = input.split('\n')
+
+
+  input = input.map((line) => line.split(',') )// map()매소드는 콜백함수에서 리턴한 값들을 기반으로 새로운 배열을 만드는 함수다.
+
+
+  JSON.stringify(input, null, 2)  //문자열화하는것  p.250쪽
+
+  console.log(input)
+  
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>l
