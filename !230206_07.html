@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    const num = 52000
+    const num2 = new Number(num) //num은 기본 자료형이므로 이렇게 객체 자료형으로 바꿔야한다.
+
+    num2.원 = function () {
+      return this.valueOf() + '원' //valueOf()메소드는 괄호 안의 해당 객체를 String 객체로 변환시키는 역할이다.
+    }
+
+    console.log(num2.원())
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
