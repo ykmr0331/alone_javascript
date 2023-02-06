@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const divs = document.querySelectorAll ('body >div')// body >div   이거 그냥 div라고 적어도 무방함
+
+      divs.forEach((div,index) => { //div의 개수만큼 반복해서 출력합니다.
+        console.log(div, index)  
+        const val = index * 10// index는 0부터 24니까 (0*10),(1*10),(2*10),(3*10),...(24*10)로 된다.
+        div.style.height = `10px`
+        div.style.backgroundColor =`rgba(${val},${val},${val})`
+      })
+    })
+  </script>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>
