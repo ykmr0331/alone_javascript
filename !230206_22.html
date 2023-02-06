@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const a = document.querySelector('#a')
+      const b = document.querySelector('#b')
+    
+      a.textContent = '<h1>textContent 속성</h1>'
+      b.innerHTML = '<h1>innerHTML 속성</h1>'
+    })
+  </script>
+</head>
+<body>
+  <!--div 태그는 Division의 약자로, 레이아웃을 나누는데 주로 쓰입니다 
+      다른 태그와 다르게 특별한 기능을 갖고 있지는 않고, 가상의 레이아웃을 설계하는데 쓰이며, 주로 CSS와 연동하여 쓰입니다.-->
+  <div id="a"></div>
+  <div id ="b"></div>
+</body>
+</html>
