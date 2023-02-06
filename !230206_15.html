@@ -16,6 +16,7 @@
   </script>
 
   <script>// p.299 얕은 복사로 객체 복사하기
+    {//밑에 '깊은 복사로 객체복사하기'에서 구름에 대한 상수 정의가 있기에
     const 구름 = {
       이름: '구름',
       나이: 6,
@@ -27,7 +28,23 @@
 
     console.log(JSON.stringify(구름))
     console.log(JSON.stringify(별))
+    }
   </script>
+
+<script>// p.300 전개연산자를 사용해 깊은 복사하기
+  const 구름 = {
+    이름: '구름',
+    나이: 6,
+    종족: '강아지'
+  }
+  const 별 = {...구름}
+  별.이름 = '별'
+  별.나이 = 1
+
+  console.log(JSON.stringify(구름))
+  console.log(JSON.stringify(별))
+</script>
+
 </head>
 <body>
   
