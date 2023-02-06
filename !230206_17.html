@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>      //전개부분 뒤로 이동하기
+    const 구름 = {
+      이름: '구름',
+      나이: 6,
+      종족: '강아지'
+    }
+    const 별 = {
+      이름: '별',
+      나이: 1,
+      예방접종: true,
+      ...구름   //여기 맨 뒤에 입력하니까 전개부분이 뒤로 이동되는 것임!!!!!!!!!
+    }
+    
+    console.log(JSON.stringify(구름))
+    console.log(JSON.stringify(별))
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
