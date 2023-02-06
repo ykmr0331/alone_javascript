@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOMContentLoaded</title>   
+  <!-- DOMContentLoaded는 문서객체 조작 이벤트다. -->
+  <script>
+    //DOMContentLoaded 이벤트를 연결합니다.
+    document.addEventListener('DOMContentLoaded', () => {  //화살표함수 h1함수를 만듦, text를 입력하면 h1크기로 text가 입력되게하는 함수 
+      const h1 = (text) => `<h1>${text}<h1>`
+      document.body.innerHTML += h1('DOMContentLoaded 이벤트 발생')
+      //document.body.innerHTML 는 body안에 있는 HTML코드를 자바스크립트로 조작할 수 있게 하는 코드다.
+      //그러므로 h1함수 매개변수?에 text입력해서 body태그에 h1크기로 'DOMContentLoaded 이벤트 발생' 나오도록!!
+    })
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
