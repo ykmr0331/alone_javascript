@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const h1 = document.querySelector('h1')
+      const print = (event) => {
+        let output = ''
+        output += `alt: ${event.altKey}<br>`  //이벤트가 발생하면 불값을 반환한다. ctrl과 shift도
+        output += `ctrl: ${event.ctrlKey}<br>`
+        output += `shift: ${event.shiftKey}<br>` 
+        output += `code: ${typeof(event.code) !== 'undefined' ? //event.code가 있으면 event.code를 출력하고, undefined라면 event.keyCode를 출력합니다.
+          event.code : event.keyCode}<br>`
+        h1.innerHTML = output
+      }
+
+      document.addEventListener('keydown', print)
+      document.addEventListener('keyup', print)
+    })
+  </script>
+</head>
+<body>
+  <h1></h1>
+</body>
+</html>
