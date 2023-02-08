@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=> {
+      const textarea = document.querySelector('textarea')
+      const h1 = document.querySelector('h1')
+
+      textarea.addEventListener('keyup', (event) => {  //한글은 아시아 언어인데 아시아권문자는 keypress의 경우에는 작동을 잘 안하는 경우가 많다.
+        const length = textarea.value.length
+        h1.textContent = `글자 수: ${length}`
+      })
+    })
+  </script>
+</head>
+<body>
+  <h1></h1>
+  <textarea></textarea>
+</body>
+</html>
