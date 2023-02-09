@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>//p.396 생성자함수와 속성 추가하기
+
+    class Student { //Student가 '클래스 이름'이다
+      constructor (이름, 국어, 영어, 수학, 과학) {
+        /* 생성자 코드 */
+        this.이름 = 이름
+        this.국어 = 국어
+        this.영어 = 영어
+        this.수학 = 수학
+        this.과학 = 과학      
+      }
+    }
+
+    //객체를 선언합니다.
+    const students = []
+    students.push(new Student('구름', 87, 98, 88, 90))//메소드의 이름은 constructor로 지정했지만 이거말고 new Student()처럼 클래스 이름으로 호출한다.(생성자를?)
+    students.push(new Student('별이', 92, 98, 96, 88))
+    students.push(new Student('겨울', 76, 96, 94, 86))
+    students.push(new Student('바다', 98, 52, 98, 92))
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
