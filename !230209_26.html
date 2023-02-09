@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>//p.400 2번
+    class Restaurant {
+      constructor (이름, 주소, 영업시간, 전화번호, 리뷰목록) {
+        this.이름 = 이름
+        this.주소 = 주소 
+        this.영업시간 = 영업시간 
+        this.전화번호 = 전화번호
+        this.리뷰목록 = 리뷰목록
+      }
+      
+      toString () {
+        return `${this.이름}\t${this.주소}\t${this.영업시간}\t${this.전화번호}\t${this.리뷰목록}\n`
+      }
+    }
+
+    //객체를 선언합니다.
+    
+    const restaurants = []
+    restaurants.push(new Restaurant('목란', '우리집 앞', '09~20', '02-123-1234', '맛있다'))
+    restaurants.push(new Restaurant('별빛이내리는밤', '우리집 옆', '09~18', '02-456-7890', '그냥그렇다'))
+    restaurants.push(new Restaurant('어제 너네집', '우리집 뒤', '17~04', '02-123-4567', '개맛있다'))
+    restaurants.push(new Restaurant('저번에 가본곳', '우리집 위', '09~18', '02-423-7634', '개맛없다'))
+
+    //출력합니다.
+    let output = '이름\t주소\t영업시간\t전화번호\t리뷰목록\n'
+    for (const r of restaurants) {
+      output += r.toString()
+    }
+    console.log(output)
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
