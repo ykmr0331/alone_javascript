@@ -1,0 +1,21 @@
+<!DOCTYPE html><!--350-->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const imgs = document.querySelectorAll('img')
+
+      img.forEach((img) => {
+        img.addEventListener('contextmenu', (event) => {
+          event.preventDefault()  //컨텍스트메뉴를 출력하는 기본이벤트를 제거한다.  불펌방지위해
+        })
+      })
+    })
+  </script>
+</head>
+<body>
+  <img sr ="http://placekitten.com/300/300" alt ="">
+</body>
+</html>
