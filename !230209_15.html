@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+  <script> //p.379 예외 강제로 발생시키고 잡기
+    function divide(a, b) {
+      if (b === 0) {
+        throw '0으로 나눌 수 없습니다.'//강제로 예외 만든거
+      }
+      return a / b
+    }
+
+    console.log(divide(10,2))
+    console.log(divide(10,0))
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

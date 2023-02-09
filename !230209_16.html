@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>//p.380 예외 강제로 발생시키기
+    function test(object) {
+      console.log(object.a + object.b)//object.a가 undefined로 나오며 object.b도 undefined로 나온다.
+    }                                 //근데 undefined + undefined를 하면 NaN이 나온다!!! 
+                                    //즉 아무 오류없이 코드가 정상적으로 실행된다!!
+    test({})
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
