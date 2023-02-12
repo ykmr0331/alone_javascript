@@ -5,7 +5,7 @@ public class j230212_01 { //ch1-13~16
 		//ctrl +shft+ l: 단축키 전체목록 보기
 		//ctrl + '+','-': 폰트크기 증가,감소
 		//ctrl + d  :한줄 삭제
-		//ctrl + alt +  + down : 행단위 복사
+		//ctrl + alt + down : 행단위 복사
 		//alt + shift + A : 멀티컬럼 편집
 		//alt + up, down: 행단위 이동
 		//tab: 들여쓰기
