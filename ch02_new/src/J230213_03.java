@@ -1,6 +1,6 @@
 
 public class J230213_03 {
-//ch2-17 타입간의 변환방법 66쪽
+//ch2-17 타입간의 변환방법 66쪽 22강
 	public static void main(String[] args) {
 	String str = "3";
 	
