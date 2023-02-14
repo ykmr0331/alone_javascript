@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class J230214_14 {
-//2차원 배열의 초기화 예제 3
+//예제 5-10 2차원 배열의 초기화 예제 3
 	public static void main(String[] args) {
 		String[][] words = {
 				{"chair","의자"},      	// words[0][0], words[0][1]
