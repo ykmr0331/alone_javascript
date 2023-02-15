@@ -1,5 +1,5 @@
 class Data2 { int x; }
-
+//ch-24,25참조형 매개변수, 
 class J230215_04 {                                    //J230215의 클래스가 메모리에 로드되고 J230215의 클래스의 main 매서드가 호출되면서 프로그램은 시작된다.   
 	public static void main(String[] args) {
 		Data2 d = new Data2();		//Data클래스의 메모리가 로드되고 Data타입의 참조변수 d가 main메서드의 지역변수로 생성된다. Data클래스의 인스턴스가 생성되고, 생성된 인스턴스의 주소가 참조변수 d에 저장된다.
