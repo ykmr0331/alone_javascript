@@ -15,7 +15,7 @@ public class J230218_08 {
   //	group[0].move(100, 200);  
 	}
 }
-
+	
 abstract class Unit {
 	int x, y;
 	abstract void move(int x, int y);
