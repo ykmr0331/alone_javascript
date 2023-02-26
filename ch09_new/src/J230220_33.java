@@ -14,7 +14,7 @@ class J230220_33 {
 
 		System.out.println("sb ="+sb.deleteCharAt(10));
 		System.out.println("sb ="+sb.delete(3,6));
-		System.out.println("sb ="+sb.insert(3,"abc"));
+		System.out.println("sb ="+sb.insert(3,"abc")); 
 		System.out.println("sb ="+sb.replace(6, sb.length(), "END"));
 
 		System.out.println("capacity="+sb.capacity());
