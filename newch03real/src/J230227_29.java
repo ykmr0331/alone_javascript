@@ -6,7 +6,7 @@ public class J230227_29 {
 		int absX, absY, absZ;
 		char signX, signY, signZ;
 		
-		x = 10;3
+		x = 10;
 		y = -5; 
 		z = 0;
 		
